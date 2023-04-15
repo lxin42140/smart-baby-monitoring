@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css"></link>
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <table>
+      <tr>
+        <th>Device Name</th>
+        <th>Average Pressure</th>
+        <th>Average Gyro</th>
+        <th>left distance</th>
+        <th>right distance</th>
+        <th>temperature</th>
+      </tr>
+      {% for lineItem in readings %}
+        <tr>
+          <td>{{lineItem[0]}}</td>
+          <td>{{lineItem[1]}}</td>
+          <td>{{lineItem[2]}}</td>
+          <td>{{lineItem[3]}}</td>
+          <td>{{lineItem[4]}}</td>
+          <td>{{lineItem[5]}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    </br>
+    {% for key, value in fogImages.items() %} 
+    <h3>{{key}}</h3>
+    <table>
+      <tr>
+        <th>timestamp</th>
+        <th>image</th>
+      </tr>
+      {% for fogImageObject in value %}
+        <tr>
+          <td>{{fogImageObject["timestamp"]}}</td>
+          <td><img src="data:image/jpeg;base64,{{fogImageObject["image"]}}" alt="image"/></td>
+        </tr>
+      {% endfor %}
+    </table>
+    {% endfor %}
+  </body>
+</html>

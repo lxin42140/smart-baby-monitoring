@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-end {
+  justify-content: flex-end;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-center {
+  align-items: center;
+}
+
+.link {
+  color: darkblue
+}

@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 3px
+}
+
+img {
+    width: 300px;
+    height: auto
+}
